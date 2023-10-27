@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify
 import joblib 
 
-
 app = Flask(__name__)
 
-model= joblib.load('KNN_classifier.joblib')
+model= joblib.load('DecisionTreeML.joblib')
 
 @app.route("/predict",methods=['POST'])
 def predict_area():
